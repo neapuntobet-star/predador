@@ -14,225 +14,194 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #071b15;
-      color: #ffffff;
+      margin: 0;
       min-height: 100vh;
+      background: #071b15;
+      color: #fff;
+      font-family: Arial, sans-serif;
     }
 
     header {
-      padding: 25px 8%;
+      padding: 17px 6%;
       background: #0b261c;
       border-bottom: 1px solid #244c36;
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
       color: #a3ff69;
-      font-size: 22px;
       font-weight: bold;
+      font-size: 20px;
       letter-spacing: 2px;
     }
 
     .hero {
+      padding: 40px 20px 24px;
       text-align: center;
-      padding: 65px 20px 30px;
     }
 
     .hero h1 {
-      font-size: clamp(38px, 7vw, 68px);
       color: #a3ff69;
-      letter-spacing: 3px;
-      margin-bottom: 18px;
+      font-size: clamp(35px, 6vw, 58px);
+      letter-spacing: 2px;
+      margin: 0 0 12px;
     }
 
     .hero p {
       color: #bdcfc4;
-      font-size: 17px;
-      line-height: 1.6;
+      font-size: 15px;
+      line-height: 1.5;
     }
 
-    /* ==================================
-       LÍNEAS DE ATENCIÓN Y COMUNIDAD
-       ================================== */
+    /* VENTANITAS DE INFORMACIÓN */
 
-    .informacion {
-      max-width: 850px;
-      margin: 15px auto 45px;
-      padding: 0 22px;
+    .avisos {
+      max-width: 1100px;
+      margin: 0 auto 27px;
+      padding: 0 20px;
       display: grid;
-      gap: 18px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
     }
 
-    .atencion {
+    .aviso {
       background: #123b2a;
       border: 1px solid #43845a;
-      border-radius: 20px;
-      padding: 28px 24px;
-      text-align: center;
+      border-radius: 16px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
 
-    .atencion h2 {
-      font-size: 24px;
-      margin-bottom: 14px;
+    .aviso.comunidad {
+      background: #234429;
+      border-color: #a3ff69;
     }
 
-    .atencion p {
-      color: #d0e5d6;
-      line-height: 1.6;
-      margin-bottom: 20px;
+    .aviso-icono {
+      background: #28583b;
+      width: 45px;
+      height: 45px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 23px;
+      flex-shrink: 0;
     }
 
-    .boton-atencion {
+    .aviso-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .aviso-info h2 {
+      font-size: 16px;
+      margin: 0 0 7px;
+    }
+
+    .aviso-info p {
+      font-size: 12px;
+      color: #c7ddcc;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    .aviso-boton {
       display: inline-block;
+      flex-shrink: 0;
       background: #25d366;
       color: #092015;
-      padding: 16px 25px;
-      border-radius: 12px;
-      font-size: 16px;
-      font-weight: bold;
       text-decoration: none;
-      transition: 0.2s;
-    }
-
-    .boton-atencion:hover {
-      background: #53e58b;
-      transform: translateY(-2px);
-    }
-
-    .aviso-atencion {
-      margin-top: 18px;
       font-size: 13px;
-      color: #b4cdbb;
-      line-height: 1.6;
-    }
-
-    .comunidad {
-      background: linear-gradient(
-        135deg,
-        #23492a,
-        #163a27
-      );
-      border: 2px solid #a3ff69;
-      border-radius: 20px;
-      padding: 28px 24px;
+      font-weight: bold;
+      padding: 12px 15px;
+      border-radius: 10px;
       text-align: center;
-    }
-
-    .etiqueta {
-      display: inline-block;
-      background: #a3ff69;
-      color: #092015;
-      padding: 7px 15px;
-      border-radius: 30px;
-      font-size: 12px;
-      font-weight: bold;
-      margin-bottom: 17px;
-      letter-spacing: 1px;
-    }
-
-    .comunidad h2 {
-      font-size: 24px;
-      margin-bottom: 14px;
-    }
-
-    .comunidad p {
-      color: #d7e9d8;
-      line-height: 1.7;
-      margin-bottom: 22px;
-    }
-
-    .boton-comunidad {
-      display: inline-block;
-      background: #a3ff69;
-      color: #092015;
-      padding: 17px 28px;
-      border-radius: 12px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
       transition: 0.2s;
     }
 
-    .boton-comunidad:hover {
-      background: #c1ff9d;
+    .comunidad .aviso-boton {
+      background: #a3ff69;
+    }
+
+    .aviso-boton:hover {
+      filter: brightness(1.12);
       transform: translateY(-2px);
     }
 
-    /* ==================================
-       PLATAFORMAS
-       ================================== */
+    /* PLATAFORMAS */
 
     .titulo-plataformas {
-      font-size: 29px;
       text-align: center;
-      padding: 10px 20px 0;
-      color: #ffffff;
+      font-size: 25px;
+      margin: 20px 0 5px;
     }
 
     .contenedor {
       max-width: 1150px;
       margin: auto;
-      padding: 35px 22px 80px;
+      padding: 25px 22px 60px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 22px;
     }
 
     .tarjeta {
       background: #123125;
       border: 1px solid #28543b;
       border-radius: 20px;
-      padding: 30px 22px;
+      padding: 28px 22px;
       text-align: center;
       transition: 0.3s ease;
     }
 
     .tarjeta:hover {
-      transform: translateY(-7px);
+      transform: translateY(-6px);
       border-color: #a3ff69;
       box-shadow: 0 12px 35px #00000040;
     }
 
     .icono {
-      width: 65px;
-      height: 65px;
+      width: 58px;
+      height: 58px;
       background: #214b32;
-      border-radius: 18px;
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 32px;
-      margin: 0 auto 20px;
+      font-size: 29px;
+      margin: 0 auto 18px;
     }
 
     .tarjeta h2 {
-      font-size: 23px;
-      margin-bottom: 12px;
+      font-size: 22px;
+      margin: 0 0 10px;
     }
 
     .tarjeta p {
       color: #a9c0b0;
-      font-size: 14px;
-      margin-bottom: 28px;
+      font-size: 13px;
+      margin-bottom: 23px;
     }
 
     .botones {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 11px;
     }
 
     .boton {
       display: block;
       width: 100%;
-      padding: 15px;
-      border-radius: 12px;
+      padding: 14px;
+      border-radius: 11px;
       font-weight: bold;
       text-decoration: none;
-      font-size: 15px;
+      font-size: 14px;
       transition: 0.2s;
     }
 
@@ -247,7 +216,7 @@
 
     .whatsapp {
       background: #20543a;
-      color: #ffffff;
+      color: #fff;
       border: 1px solid #397f56;
     }
 
@@ -263,35 +232,81 @@
     footer {
       text-align: center;
       color: #809c8a;
-      font-size: 13px;
-      padding: 30px;
+      font-size: 12px;
+      padding: 25px;
       border-top: 1px solid #244c36;
     }
+
+    /* CELULARES */
 
     @media (max-width: 900px) {
       .contenedor {
         grid-template-columns: repeat(2, 1fr);
       }
+
+      .aviso {
+        flex-wrap: wrap;
+      }
+
+      .aviso-boton {
+        width: 100%;
+      }
     }
 
     @media (max-width: 600px) {
+      .hero {
+        padding: 32px 15px 20px;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .avisos {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 0 15px;
+        margin-bottom: 22px;
+      }
+
+      .aviso {
+        padding: 13px;
+        gap: 10px;
+        flex-wrap: nowrap;
+      }
+
+      .aviso-icono {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .aviso-info h2 {
+        font-size: 14px;
+      }
+
+      .aviso-info p {
+        font-size: 11px;
+      }
+
+      .aviso-boton {
+        width: auto;
+        padding: 10px;
+        font-size: 12px;
+      }
+
       .contenedor {
         grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 15px 45px;
       }
 
-      .hero {
-        padding-top: 55px;
+      .tarjeta {
+        padding: 22px 18px;
       }
 
-      .atencion,
-      .comunidad {
-        padding: 25px 17px;
-      }
-
-      .boton-atencion,
-      .boton-comunidad {
-        display: block;
-        width: 100%;
+      .titulo-plataformas {
+        font-size: 22px;
       }
     }
   </style>
@@ -307,78 +322,58 @@
   <section class="hero">
     <h1>RÍO FORTUNA</h1>
     <p>
-      Elegí tu plataforma para ingresar.
-      <br>
-      ¿Todavía no tenés cuenta?
-      Solicitá una por WhatsApp.
+      Elegí tu plataforma para ingresar
+      o solicitar tu cuenta por WhatsApp.
     </p>
   </section>
 
-  <!-- ==================================
-       LÍNEAS DE ATENCIÓN DISPONIBLES
-       ================================== -->
+  <!-- VENTANITAS DE INFORMACIÓN -->
 
-  <section class="informacion">
+  <section class="avisos">
 
-    <div class="atencion">
+    <div class="aviso">
+      <div class="aviso-icono">📲</div>
 
-      <h2>📲 Líneas de atención disponibles</h2>
-
-      <p>
-        ¿Necesitás comunicarte con nosotros?
-        Contactanos directamente por WhatsApp.
-      </p>
+      <div class="aviso-info">
+        <h2>Líneas de atención</h2>
+        <p>
+          Consultá siempre esta página para
+          conocer las líneas disponibles.
+        </p>
+      </div>
 
       <a
         id="botonAtencion"
-        class="boton-atencion"
+        class="aviso-boton"
         target="_blank"
         rel="noopener noreferrer">
-        💬 Contactar por WhatsApp
+        Contactar
       </a>
-
-      <div class="aviso-atencion">
-        📌 Recordá consultar siempre esta página
-        para saber cuáles son las líneas
-        de atención disponibles.
-      </div>
-
     </div>
 
-    <!-- COMUNIDAD DE WHATSAPP -->
+    <div class="aviso comunidad">
+      <div class="aviso-icono">📢</div>
 
-    <div class="comunidad">
-
-      <div class="etiqueta">
-        ⭐ IMPORTANTE
+      <div class="aviso-info">
+        <h2>¡Unite a nuestra comunidad!</h2>
+        <p>
+          Enterate de las líneas disponibles,
+          avisos y novedades semanales.
+        </p>
       </div>
 
-      <h2>📢 Nuestra comunidad de WhatsApp</h2>
-
-      <p>
-        ¡No te pierdas ninguna novedad!
-        <br><br>
-        Unite a nuestra comunidad, donde
-        informamos las líneas de atención
-        disponibles y compartimos
-        bonificaciones y novedades semanales.
-      </p>
-
       <a
-        href="https://chat.whatsapp.com/LeFfGrWBjTy6x1ifFMTJS3"
-        class="boton-comunidad"
+        id="botonComunidad"
+        class="aviso-boton"
         target="_blank"
         rel="noopener noreferrer">
-        👥 Unirme a la comunidad
+        Unirme
       </a>
-
     </div>
 
   </section>
 
-  <!-- ==================================
-       PLATAFORMAS
-       ================================== -->
+  <!-- PLATAFORMAS -->
 
   <h2 class="titulo-plataformas">
     Nuestras plataformas
@@ -395,63 +390,55 @@
 
   <script>
 
-    // ========================================
-    // 🟢 CONFIGURACIÓN: EDITAR ACÁ
-    // ========================================
+    // ====================================
+    // 🟢 CONFIGURACIÓN - EDITAR ACÁ
+    // ====================================
 
-    // WHATSAPP DE ATENCIÓN
-    // Código de país + número, sin espacios.
+    // NÚMERO DE WHATSAPP
     const whatsapp = "543794705606";
 
-    // COMUNIDAD DE WHATSAPP
+    // ENLACE DE LA COMUNIDAD
     const comunidad =
       "https://chat.whatsapp.com/LeFfGrWBjTy6x1ifFMTJS3";
 
     // TUS TRES PLATAFORMAS
-
     const plataformas = [
-
       {
         nombre: "Predador",
         link: "https://predadorr.vercel.app/"
       },
-
       {
         nombre: "Bet 30",
         link: "https://bet30-links.keen-calf-7239.chatgpt.site"
       },
-
       {
         nombre: "Ganamos",
         link: "https://mis-sitios-dana.keen-calf-7239.chatgpt.site/"
       }
-
     ];
 
-    // ========================================
-    // 🔴 NO ES NECESARIO EDITAR DESDE ACÁ
-    // ========================================
+    // ====================================
+    // 🔴 NO EDITAR DESDE ACÁ
+    // ====================================
 
-    // CONFIGURAR BOTÓN DE ATENCIÓN
+    // BOTÓN DE ATENCIÓN
 
     const mensajeAtencion =
       "¡Hola! Quiero comunicarme con " +
       "la atención de Río Fortuna.";
 
-    const enlaceAtencion =
+    document.getElementById(
+      "botonAtencion"
+    ).href =
       "https://wa.me/" +
       whatsapp +
       "?text=" +
       encodeURIComponent(mensajeAtencion);
 
+    // BOTÓN COMUNIDAD
+
     document.getElementById(
-      "botonAtencion"
-    ).href = enlaceAtencion;
-
-    // CONFIGURAR COMUNIDAD
-
-    document.querySelector(
-      ".boton-comunidad"
+      "botonComunidad"
     ).href = comunidad;
 
     // CREAR TARJETAS
@@ -459,108 +446,96 @@
     const contenedor =
       document.getElementById("plataformas");
 
-    function crearTarjetas() {
+    plataformas.forEach((plataforma) => {
 
-      plataformas.forEach((plataforma) => {
+      const tarjeta =
+        document.createElement("article");
 
-        const tarjeta =
-          document.createElement("article");
+      tarjeta.className = "tarjeta";
 
-        tarjeta.className = "tarjeta";
+      const icono =
+        document.createElement("div");
 
-        const icono =
-          document.createElement("div");
+      icono.className = "icono";
+      icono.textContent = "🌟";
 
-        icono.className = "icono";
-        icono.textContent = "🌟";
+      const titulo =
+        document.createElement("h2");
 
-        const titulo =
-          document.createElement("h2");
+      titulo.textContent = plataforma.nombre;
 
-        titulo.textContent = plataforma.nombre;
+      const descripcion =
+        document.createElement("p");
 
-        const descripcion =
-          document.createElement("p");
+      descripcion.textContent =
+        "Ingresá o solicitá tu cuenta.";
 
-        descripcion.textContent =
-          "Ingresá o solicitá tu cuenta.";
+      const botones =
+        document.createElement("div");
 
-        const botones =
-          document.createElement("div");
+      botones.className = "botones";
 
-        botones.className = "botones";
+      // BOTÓN INGRESAR
 
-        // BOTÓN INGRESAR
+      const ingresar =
+        document.createElement("a");
 
-        const ingresar =
-          document.createElement("a");
+      ingresar.className = "boton ingresar";
+      ingresar.textContent = "↗ Ingresar";
 
-        ingresar.className =
-          "boton ingresar";
+      const linkValido =
+        plataforma.link &&
+        /^https?:\/\//i.test(plataforma.link) &&
+        !/^https?:\/\/www\.ejemplo\d+\.com\/?$/i.test(
+          plataforma.link
+        );
 
-        ingresar.textContent =
-          "↗ Ingresar";
+      if (linkValido) {
+        ingresar.href = plataforma.link;
+        ingresar.target = "_blank";
+        ingresar.rel = "noopener noreferrer";
+      } else {
+        ingresar.classList.add("deshabilitado");
+        ingresar.textContent = "Próximamente";
+      }
 
-        const linkValido =
-          plataforma.link &&
-          /^https?:\/\//i.test(plataforma.link) &&
-          !/^https?:\/\/www\.ejemplo\d+\.com\/?$/i.test(
-            plataforma.link
-          );
+      // BOTÓN SOLICITAR CUENTA
 
-        if (linkValido) {
-          ingresar.href = plataforma.link;
-          ingresar.target = "_blank";
-          ingresar.rel = "noopener noreferrer";
-        } else {
-          ingresar.classList.add("deshabilitado");
-          ingresar.removeAttribute("href");
-          ingresar.textContent =
-            "Próximamente";
-        }
+      const mensaje =
+        "¡Hola! Quiero solicitar una cuenta en " +
+        plataforma.nombre + ".";
 
-        // BOTÓN SOLICITAR CUENTA
+      const solicitar =
+        document.createElement("a");
 
-        const mensaje =
-          "¡Hola! Quiero solicitar una cuenta en " +
-          plataforma.nombre + ".";
+      solicitar.className = "boton whatsapp";
 
-        const enlaceWhatsapp =
-          "https://wa.me/" +
-          whatsapp +
-          "?text=" +
-          encodeURIComponent(mensaje);
+      solicitar.href =
+        "https://wa.me/" +
+        whatsapp +
+        "?text=" +
+        encodeURIComponent(mensaje);
 
-        const solicitar =
-          document.createElement("a");
+      solicitar.target = "_blank";
+      solicitar.rel = "noopener noreferrer";
 
-        solicitar.className =
-          "boton whatsapp";
+      solicitar.textContent =
+        "☏ Solicitar cuenta";
 
-        solicitar.href = enlaceWhatsapp;
-        solicitar.target = "_blank";
-        solicitar.rel = "noopener noreferrer";
+      botones.appendChild(ingresar);
+      botones.appendChild(solicitar);
 
-        solicitar.textContent =
-          "☏ Solicitar cuenta";
+      tarjeta.appendChild(icono);
+      tarjeta.appendChild(titulo);
+      tarjeta.appendChild(descripcion);
+      tarjeta.appendChild(botones);
 
-        botones.appendChild(ingresar);
-        botones.appendChild(solicitar);
+      contenedor.appendChild(tarjeta);
 
-        tarjeta.appendChild(icono);
-        tarjeta.appendChild(titulo);
-        tarjeta.appendChild(descripcion);
-        tarjeta.appendChild(botones);
-
-        contenedor.appendChild(tarjeta);
-
-      });
-
-    }
-
-    crearTarjetas();
+    });
 
   </script>
 
 </body>
 </html>
+
