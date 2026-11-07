@@ -38,7 +38,7 @@
 
     .hero {
       text-align: center;
-      padding: 75px 20px 45px;
+      padding: 65px 20px 30px;
     }
 
     .hero h1 {
@@ -52,6 +52,124 @@
       color: #bdcfc4;
       font-size: 17px;
       line-height: 1.6;
+    }
+
+    /* ==================================
+       LÍNEAS DE ATENCIÓN Y COMUNIDAD
+       ================================== */
+
+    .informacion {
+      max-width: 850px;
+      margin: 15px auto 45px;
+      padding: 0 22px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .atencion {
+      background: #123b2a;
+      border: 1px solid #43845a;
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .atencion h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .atencion p {
+      color: #d0e5d6;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .boton-atencion {
+      display: inline-block;
+      background: #25d366;
+      color: #092015;
+      padding: 16px 25px;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .boton-atencion:hover {
+      background: #53e58b;
+      transform: translateY(-2px);
+    }
+
+    .aviso-atencion {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #b4cdbb;
+      line-height: 1.6;
+    }
+
+    .comunidad {
+      background: linear-gradient(
+        135deg,
+        #23492a,
+        #163a27
+      );
+      border: 2px solid #a3ff69;
+      border-radius: 20px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .etiqueta {
+      display: inline-block;
+      background: #a3ff69;
+      color: #092015;
+      padding: 7px 15px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 17px;
+      letter-spacing: 1px;
+    }
+
+    .comunidad h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+    }
+
+    .comunidad p {
+      color: #d7e9d8;
+      line-height: 1.7;
+      margin-bottom: 22px;
+    }
+
+    .boton-comunidad {
+      display: inline-block;
+      background: #a3ff69;
+      color: #092015;
+      padding: 17px 28px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.2s;
+    }
+
+    .boton-comunidad:hover {
+      background: #c1ff9d;
+      transform: translateY(-2px);
+    }
+
+    /* ==================================
+       PLATAFORMAS
+       ================================== */
+
+    .titulo-plataformas {
+      font-size: 29px;
+      text-align: center;
+      padding: 10px 20px 0;
+      color: #ffffff;
     }
 
     .contenedor {
@@ -164,6 +282,17 @@
       .hero {
         padding-top: 55px;
       }
+
+      .atencion,
+      .comunidad {
+        padding: 25px 17px;
+      }
+
+      .boton-atencion,
+      .boton-comunidad {
+        display: block;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -185,7 +314,80 @@
     </p>
   </section>
 
-  <main class="contenedor" id="plataformas"></main>
+  <!-- ==================================
+       LÍNEAS DE ATENCIÓN DISPONIBLES
+       ================================== -->
+
+  <section class="informacion">
+
+    <div class="atencion">
+
+      <h2>📲 Líneas de atención disponibles</h2>
+
+      <p>
+        ¿Necesitás comunicarte con nosotros?
+        Contactanos directamente por WhatsApp.
+      </p>
+
+      <a
+        id="botonAtencion"
+        class="boton-atencion"
+        target="_blank"
+        rel="noopener noreferrer">
+        💬 Contactar por WhatsApp
+      </a>
+
+      <div class="aviso-atencion">
+        📌 Recordá consultar siempre esta página
+        para saber cuáles son las líneas
+        de atención disponibles.
+      </div>
+
+    </div>
+
+    <!-- COMUNIDAD DE WHATSAPP -->
+
+    <div class="comunidad">
+
+      <div class="etiqueta">
+        ⭐ IMPORTANTE
+      </div>
+
+      <h2>📢 Nuestra comunidad de WhatsApp</h2>
+
+      <p>
+        ¡No te pierdas ninguna novedad!
+        <br><br>
+        Unite a nuestra comunidad, donde
+        informamos las líneas de atención
+        disponibles y compartimos
+        bonificaciones y novedades semanales.
+      </p>
+
+      <a
+        href="https://chat.whatsapp.com/LeFfGrWBjTy6x1ifFMTJS3"
+        class="boton-comunidad"
+        target="_blank"
+        rel="noopener noreferrer">
+        👥 Unirme a la comunidad
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- ==================================
+       PLATAFORMAS
+       ================================== -->
+
+  <h2 class="titulo-plataformas">
+    Nuestras plataformas
+  </h2>
+
+  <main
+    class="contenedor"
+    id="plataformas">
+  </main>
 
   <footer>
     © 2026 RÍO FORTUNA
@@ -193,13 +395,19 @@
 
   <script>
 
-    // 🟢 TU NÚMERO DE WHATSAPP
-    // Código país + número, sin espacios.
+    // ========================================
+    // 🟢 CONFIGURACIÓN: EDITAR ACÁ
+    // ========================================
+
+    // WHATSAPP DE ATENCIÓN
+    // Código de país + número, sin espacios.
     const whatsapp = "543794705606";
 
+    // COMUNIDAD DE WHATSAPP
+    const comunidad =
+      "https://chat.whatsapp.com/LeFfGrWBjTy6x1ifFMTJS3";
 
-    // 🟢 TUS TRES PLATAFORMAS
-    // Reemplazá los nombres y los enlaces.
+    // TUS TRES PLATAFORMAS
 
     const plataformas = [
 
@@ -224,12 +432,36 @@
     // 🔴 NO ES NECESARIO EDITAR DESDE ACÁ
     // ========================================
 
+    // CONFIGURAR BOTÓN DE ATENCIÓN
+
+    const mensajeAtencion =
+      "¡Hola! Quiero comunicarme con " +
+      "la atención de Río Fortuna.";
+
+    const enlaceAtencion =
+      "https://wa.me/" +
+      whatsapp +
+      "?text=" +
+      encodeURIComponent(mensajeAtencion);
+
+    document.getElementById(
+      "botonAtencion"
+    ).href = enlaceAtencion;
+
+    // CONFIGURAR COMUNIDAD
+
+    document.querySelector(
+      ".boton-comunidad"
+    ).href = comunidad;
+
+    // CREAR TARJETAS
+
     const contenedor =
       document.getElementById("plataformas");
 
     function crearTarjetas() {
 
-      plataformas.forEach((plataforma, index) => {
+      plataformas.forEach((plataforma) => {
 
         const tarjeta =
           document.createElement("article");
@@ -287,7 +519,7 @@
             "Próximamente";
         }
 
-        // BOTÓN WHATSAPP
+        // BOTÓN SOLICITAR CUENTA
 
         const mensaje =
           "¡Hola! Quiero solicitar una cuenta en " +
